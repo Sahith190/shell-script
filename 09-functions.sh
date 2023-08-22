@@ -1,5 +1,7 @@
 #!/bin/bash
-
+DATE=$(date +%F)
+SCRIPT_NAME=$0
+LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 USERID=$(id -u)
 #functions using
 VALIDATE(){
@@ -18,11 +20,11 @@ then
 exit 1
 fi
 
-yum install mysql -y
+yum install mysql -y &>>$LOGFILE
 
 VALIDATE $? "INSTALLATION MYSQL SUCCESS"
 
 
-yum install postfix -y
+yum install postfix -y &>>$LOGFILE
 
 VALIDATE $? "INSTALLATION POSTFIX SUCCESS"
