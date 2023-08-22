@@ -2,5 +2,5 @@
 
 for i in $@
 do
-    yum install postfix
+    yum install $i -y
 done
