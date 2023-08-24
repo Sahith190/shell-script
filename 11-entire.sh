@@ -6,9 +6,9 @@ LOGSDIR=/home/centos/shellscript-logs
 LOGFILE=$LOGSDIR/$SCRIPT_NAME-$DATE.log
 
 USERID=$(id -u)
-R="\e[33m"
+R="\e[32m"
 N="\e[0m"
-Y="\e[32m"
+Y="\e[33m"
 
 if [ $USERID -ne 0 ]
 then
