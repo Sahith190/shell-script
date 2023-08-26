@@ -10,9 +10,9 @@
 # fi
 
 
-ID=$roboshop
+id=$roboshop
 
-if [ $ID -ne 0 ];
+if [ $id -ne 0 ];
 then
    echo "if name is not there it will create"
 else
